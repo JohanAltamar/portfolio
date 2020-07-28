@@ -1,0 +1,14 @@
+/* @import url("https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400;700&display=swap"); */
+
+html {
+  background: linear-gradient(rgba(138, 57, 151, 0.5), rgba(138, 57, 151, 0.5)),
+    url(../../static/assets/background.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  
+  height: 100vh;
+  color: #fff;
+  font: 16px "Montserrat Alternates", sans-serif;
+  font-weight: bold;
+}
