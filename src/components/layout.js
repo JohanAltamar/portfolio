@@ -1,6 +1,7 @@
 import React, { useState } from "react"
 import { Link } from "gatsby"
-import "./mystyles.scss"
+import "./styles/bulmaVariables.scss"
+import "./styles/layout.css"
 
 export default function Layout({ children }) {
   const [menuStatus, setMenuStatus] = useState(false)
@@ -24,7 +25,7 @@ export default function Layout({ children }) {
                 id="brand-name"
                 className="navbar-item"
                 to="/"
-                style={style.brandName}
+                // style={style.brandName}
               >
                 Johan Altamar
               </Link>
@@ -35,6 +36,7 @@ export default function Layout({ children }) {
                 onKeyDown={handleKeyDown}
                 role="button"
                 tabIndex={0}
+                aria-label="menu button"
               >
                 <span></span>
                 <span></span>
@@ -46,16 +48,32 @@ export default function Layout({ children }) {
               className={`navbar-menu ${menuStatus && "is-active"}`}
             >
               <div className="navbar-end" style={style.navbarLinks}>
-                <Link className="navbar-item" to="/" activeClassName="is-active">
+                <Link
+                  className="navbar-item"
+                  to="/"
+                  activeClassName="is-active"
+                >
                   Home
                 </Link>
-                <Link className="navbar-item" to="/portfolio" activeClassName="is-active">
+                <Link
+                  className="navbar-item"
+                  to="/portfolio"
+                  activeClassName="is-active"
+                >
                   Portfolio
                 </Link>
-                <Link className="navbar-item" to="/blog" activeClassName="is-active">
+                <Link
+                  className="navbar-item"
+                  to="/blog"
+                  activeClassName="is-active"
+                >
                   Blog
                 </Link>
-                <Link className="navbar-item" to="/contact" activeClassName="is-active">
+                <Link
+                  className="navbar-item"
+                  to="/contact"
+                  activeClassName="is-active"
+                >
                   Contact
                 </Link>
               </div>
@@ -63,8 +81,8 @@ export default function Layout({ children }) {
           </div>
         </nav>
       </div>
-      <div className="hero-body">
-        <div className="container">{children}</div>
+      <div className="hero-body" style={style.heroBody}>
+        {children}
       </div>
       <div className="hero-foot"></div>
     </section>
@@ -74,7 +92,7 @@ export default function Layout({ children }) {
 const style = {
   brandName: {
     fontWeight: "bold",
-    fontSize: "2rem",
+    fontSize: "1.5rem",
     letterSpacing: "0.125rem",
   },
   navbarBrand: {
@@ -83,5 +101,9 @@ const style = {
   },
   navbarLinks: {
     fontSize: "1.5rem",
+  },
+  heroBody: {
+    position: "relative",
+    alignItems: "flex-start",
   },
 }

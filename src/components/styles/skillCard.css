@@ -1,0 +1,12 @@
+.card-image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 150px;
+    padding: 0.5rem;
+}
+
+.card-image img{
+    min-height: 150px;
+    max-height: 150px;
+}

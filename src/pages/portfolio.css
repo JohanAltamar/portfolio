@@ -1,0 +1,29 @@
+#portfolio-container {
+  min-width: calc(100% - 1.5rem);
+}
+
+#portfolio-skills {
+  max-height: calc(2.25rem + (2 * 1.25rem));
+}
+
+#portfolio-skills > .title,
+#portfolio-projects > .title {
+  cursor: pointer;
+}
+
+@media screen and (max-width: 360px) {
+  #portfolio-skills .title,
+  #portfolio-projects .title {
+    font-size: 1.25rem;
+  }
+  #portfolio-skills {
+    max-height: calc(1.25rem + (2 * 1.25rem));
+  }
+}
+
+@media screen and (min-width: 768px) {
+  #portfolio-container {
+    min-width: 0px;
+    max-width: calc(10 / 12 * 100%);
+  }
+}
