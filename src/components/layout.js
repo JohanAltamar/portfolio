@@ -105,5 +105,7 @@ const style = {
   heroBody: {
     position: "relative",
     alignItems: "flex-start",
+    overflowY: "auto",
+    maxHeight: "calc(100vh - 64px)",
   },
 }
