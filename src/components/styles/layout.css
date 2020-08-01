@@ -6,6 +6,7 @@
 .column .card .title {
   color: #8a4d76;
 }
+
 @media screen and (max-width: 1023px) {
   #brand-name {
     font-weight: bold;
@@ -39,4 +40,15 @@
   #brand-name {
     font-size: 1.5rem;
   }
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.hero-body::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.hero-body {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
 }

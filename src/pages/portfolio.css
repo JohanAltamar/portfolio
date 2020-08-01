@@ -2,13 +2,14 @@
   min-width: calc(100% - 1.5rem);
 }
 
-#portfolio-skills {
+#portfolio-skills, #portfolio-projects {
   max-height: calc(2.25rem + (2 * 1.25rem));
 }
 
 #portfolio-skills > .title,
 #portfolio-projects > .title {
   cursor: pointer;
+  position: relative;
 }
 
 @media screen and (max-width: 360px) {
