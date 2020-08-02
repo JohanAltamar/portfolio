@@ -10,6 +10,12 @@ export default function PortfolioSection({
   collapse,
   children,
 }) {
+
+    const handleKeyDown = (event) => {
+        if(event.keyCode === 13){
+            handleTitleClick();
+        }
+    }
   return (
     <section
       id={id}
@@ -20,6 +26,8 @@ export default function PortfolioSection({
         className="title"
         style={styles.brandColor}
         onClick={handleTitleClick}
+        onKeyDown={handleKeyDown}
+        role="presentation"
       >
         {title}
         <FontAwesomeIcon

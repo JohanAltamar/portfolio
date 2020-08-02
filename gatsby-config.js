@@ -3,6 +3,7 @@ module.exports = {
     title: `Johan Altamar | Web Developer`,
     description: `Web development and embedded systems in the same place.`,
     author: `Johan Altamar`,
+    siteUrl: `https://www.johanaltamar.com`,
   },
   plugins: [
     {
@@ -21,5 +22,6 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sass`,
     `gatsby-plugin-fontawesome-css`,
+    `gatsby-plugin-sitemap`,
   ],
 }
