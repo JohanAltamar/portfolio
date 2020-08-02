@@ -1,10 +1,30 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import { Link } from "gatsby"
 import "./styles/bulmaVariables.scss"
 import "./styles/layout.css"
 
+const DeepLink = ({ children, ...props }) => {
+  const [mainPath, setMainPath] = useState(null)
+  useEffect(() => {
+    const pathName = window.location.pathname
+    setMainPath(pathName.match(new RegExp(children, "i")))
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
+  // console.log(mainPath !== null)
+
+  return (
+    <Link
+      className={`navbar-item ${mainPath ? "is-active" : undefined}`}
+      {...props}
+    >
+      {children}
+    </Link>
+  )
+}
+
 export default function Layout({ children }) {
   const [menuStatus, setMenuStatus] = useState(false)
+
   const handleKeyDown = event => {
     if (event.keyCode === 13) {
       toggleMenu()
@@ -21,12 +41,7 @@ export default function Layout({ children }) {
         <nav className="navbar">
           <div className="container">
             <div className="navbar-brand" style={style.navbarBrand}>
-              <Link
-                id="brand-name"
-                className="navbar-item"
-                to="/"
-                // style={style.brandName}
-              >
+              <Link id="brand-name" className="navbar-item" to="/">
                 Johan Altamar
               </Link>
               <span
@@ -55,27 +70,9 @@ export default function Layout({ children }) {
                 >
                   Home
                 </Link>
-                <Link
-                  className="navbar-item"
-                  to="/portfolio"
-                  activeClassName="is-active"
-                >
-                  Portfolio
-                </Link>
-                <Link
-                  className="navbar-item"
-                  to="/blog"
-                  activeClassName="is-active"
-                >
-                  Blog
-                </Link>
-                <Link
-                  className="navbar-item"
-                  to="/contact"
-                  activeClassName="is-active"
-                >
-                  Contact
-                </Link>
+                <DeepLink to="/portfolio">Portfolio</DeepLink>
+                <DeepLink to="/blog">Blog</DeepLink>
+                <DeepLink to="/contact">Contact</DeepLink>
               </div>
             </div>
           </div>

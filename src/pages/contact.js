@@ -8,6 +8,7 @@ export default function Contact() {
       <p>
         <a href="mailto:me@example.com">me@example.com</a>
       </p>
+      <p>Hola</p>
     </Layout>
   )
 }
