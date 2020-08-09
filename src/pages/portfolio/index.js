@@ -1,4 +1,5 @@
 import React, { useState } from "react"
+import { Helmet } from "react-helmet"
 import Layout from "../../components/layout"
 import Section from "../../components/portfolioSection"
 import SkillCard from "../../components/skillCard"
@@ -17,12 +18,10 @@ import materialUiLogo from "../../images/skills/materialUi.svg"
 import javascriptLogo from "../../images/skills/javascript.svg"
 import bootstrapLogo from "../../images/skills/bootstrap.svg"
 
-
 import delivreePage from "../../images/projects/delivree.webp"
 import portfolioPage from "../../images/projects/portfolio.webp"
 import posPage from "../../images/projects/pos-system.webp"
 import chinaPage from "../../images/projects/china-bistro.webp"
-
 
 import "./portfolio.css"
 
@@ -46,6 +45,9 @@ export default function Contact() {
 
   return (
     <Layout>
+      <Helmet>
+        <title>Portfolio & Skills</title>
+      </Helmet>
       <div id="portfolio-container" className="container">
         <Section
           id="portfolio-skills"
@@ -75,10 +77,18 @@ export default function Contact() {
           handleTitleClick={toggleProjects}
           collapse={!showProjects}
         >
-          <ProjectCard image={delivreePage} text="Delivree" link="delivree"/>
-          <ProjectCard image={portfolioPage} text="Portfolio" link="portfolio"/>
-          <ProjectCard image={posPage} text="Pos System" link="pos-system"/>
-          <ProjectCard image={chinaPage} text="China Bistro" link="china-bistro"/>
+          <ProjectCard image={delivreePage} text="Delivree" link="delivree" />
+          <ProjectCard
+            image={portfolioPage}
+            text="Portfolio"
+            link="portfolio"
+          />
+          <ProjectCard image={posPage} text="Pos System" link="pos-system" />
+          <ProjectCard
+            image={chinaPage}
+            text="China Bistro"
+            link="china-bistro"
+          />
         </Section>
       </div>
     </Layout>

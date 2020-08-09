@@ -4,12 +4,13 @@ import Layout from "./layout"
 export default function ProjectLayout(props) {
   return (
     <Layout>
+      {props.helmet}
       <div className="container">
         <div className="box has-text-primary">
           <h1 className="title is-4 has-text-primary has-text-centered">
             {props.title}
           </h1>
-          <div>{props.content}</div>
+          <div className="has-text-primary">{props.content}</div>
           <div>
             <a
               className="has-text-primary has-text-weight-bold"
