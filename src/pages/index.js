@@ -13,7 +13,7 @@ const Home = () => {
             {
               name: "description",
               content:
-                "Johan Altamar, an electronic engineer with knowledge in web development, front-end and embedded systems technologies",
+                "Johan Altamar, an electronic engineer with knowledge in web development, front-end and embedded systems technologies"
             },
             { charSet: "utf-8" },
           ]}
