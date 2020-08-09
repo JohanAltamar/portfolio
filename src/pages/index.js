@@ -8,15 +8,18 @@ const Home = () => {
     <Layout>
       <div className="columns is-centered" style={style.index}>
         <Helmet
-          title="Home | Johan Altamar Web Development"
+          title="Web Development"
           meta={[
-            { name: "description", content: "Sample" },
-            { name: "keywords", content: "sample, something" },
+            {
+              name: "description",
+              content:
+                "Johan Altamar, an electronic engineer with knowledge in web development, front-end and embedded systems technologies",
+            },
             { charSet: "utf-8" },
           ]}
         >
           <html lang="en" />
-          <link rel="canonical" href="http://johanaltamar.com/" />
+          <link rel="canonical" href="https://johanaltamar.com/" />
         </Helmet>
         <div className="column is-8">
           <h4 className="title">

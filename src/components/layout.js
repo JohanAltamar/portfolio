@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react"
 import { Link } from "gatsby"
 import "./styles/bulmaVariables.scss"
 import "./styles/layout.css"
+import { Helmet } from "react-helmet"
 
 const DeepLink = ({ children, ...props }) => {
   const [mainPath, setMainPath] = useState(null)
@@ -37,6 +38,10 @@ export default function Layout({ children }) {
 
   return (
     <section className="hero is-fullheight">
+      <Helmet
+        titleTemplate="Johan Altamar - %s">
+          <meta name="viewport" content="initial-scale=1, maximum-scale=1"/>
+      </Helmet>
       <div className="hero-head">
         <nav className="navbar">
           <div className="container">
