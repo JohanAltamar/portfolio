@@ -23,7 +23,11 @@ const DeepLink = ({ children, ...props }) => {
   )
 }
 
-export default function Layout({ children, justifyContent }) {
+export default function Layout({
+  children,
+  justifyContent,
+  alignItems = "flex-start",
+}) {
   const [menuStatus, setMenuStatus] = useState(false)
 
   const handleKeyDown = event => {
@@ -84,7 +88,7 @@ export default function Layout({ children, justifyContent }) {
       </div>
       <div
         className="hero-body"
-        style={{ ...style.heroBody, justifyContent }}
+        style={{ ...style.heroBody, justifyContent, alignItems }}
       >
         {children}
       </div>
