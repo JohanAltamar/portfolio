@@ -1,13 +1,15 @@
-import React from "react";
-import Layout from "../../components/layout";
+import React from "react"
+import Layout from "../../components/layout"
+import BgImage from "../../images/underConstruction.webp"
 
 export default function About() {
   return (
-    <Layout>
-      <h1>About me</h1>
-      <p>
-        I’m good enough, I’m smart enough, and gosh darn it, people like me!
-      </p>
-    </Layout> 
-  )
+    <Layout justifyContent="center" alignItems="center">
+      <div className="column is-5">
+        <div className="container box">
+          <img src={BgImage} alt="Section under construction" />
+        </div>
+      </div>
+    </Layout>
+  ) 
 }
