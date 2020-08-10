@@ -13,7 +13,7 @@ export default function Contact() {
           <h2 className="subtitle is-6 has-text-primary mb-3">
             You can email me to
           </h2>
-          <h1 className="title is-5 mt-1 mb-4">
+          <h1 className="title is-6 mt-1 mb-4">
             <a
               className="has-text-primary"
               href="mailto:contacto@johanaltamar.com"
