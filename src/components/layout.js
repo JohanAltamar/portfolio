@@ -23,7 +23,7 @@ const DeepLink = ({ children, ...props }) => {
   )
 }
 
-export default function Layout({ children }) {
+export default function Layout({ children, justifyContent }) {
   const [menuStatus, setMenuStatus] = useState(false)
 
   const handleKeyDown = event => {
@@ -38,9 +38,8 @@ export default function Layout({ children }) {
 
   return (
     <section className="hero is-fullheight">
-      <Helmet
-        titleTemplate="Johan Altamar - %s">
-          <meta name="viewport" content="initial-scale=1, maximum-scale=1"/>
+      <Helmet titleTemplate="Johan Altamar - %s">
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1" />
       </Helmet>
       <div className="hero-head">
         <nav className="navbar">
@@ -83,7 +82,10 @@ export default function Layout({ children }) {
           </div>
         </nav>
       </div>
-      <div className="hero-body" style={style.heroBody}>
+      <div
+        className="hero-body"
+        style={{ ...style.heroBody, justifyContent }}
+      >
         {children}
       </div>
       <div className="hero-foot"></div>

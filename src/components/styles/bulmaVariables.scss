@@ -19,8 +19,6 @@ $grey-dark: $title-color;
 $grey-light: $beige-light;
 $primary: $purple;
 $link: $title-color;
-$navbar-item-hover-background-color: $purple;
-$navbar-item-active-color: $beige-light;	
 $widescreen-enabled: false;
 $fullhd-enabled: false;
 
@@ -29,6 +27,11 @@ $body-background-color: $beige-lighter;
 $control-border-width: 2px;
 $input-border-color: transparent;
 $input-shadow: none;
+$input-icon-active-color: $brown;
+$input-arrow: $beige-light;
+$label-color: $primary;
+$navbar-item-hover-background-color: $purple;
+$navbar-item-active-color: $beige-light;	
 
 // Import only what you need from Bulma
 // @import "../node_modules/bulma/sass/utilities/_all.sass";
