@@ -12,10 +12,16 @@ function ContactForm() {
     message: "",
   }
   const [value, setValue] = useState(initialValues)
-  const [isLoading, setIsLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(false)
 
   const handleChange = event => {
     setValue({ ...value, [event.target.id]: event.target.value })
+  }
+
+  const validateForm = () => {
+    return (
+      value.name && value.email && value.area && value.subject && value.message
+    )
   }
 
   const handleSubmit = async event => {
@@ -30,10 +36,10 @@ function ContactForm() {
       Message: ${value.message}`,
     }
 
-    const res = await axios.post("https://mail.johanaltamar.com", data);
-    if(res.data === "Contact info sent!"){
-      setValue(initialValues);
-      setIsLoading(false);
+    const res = await axios.post("https://mail.johanaltamar.com", data)
+    if (res.data === "Contact info sent!") {
+      setValue(initialValues)
+      setIsLoading(false)
     }
   }
 
@@ -41,7 +47,9 @@ function ContactForm() {
     <form onSubmit={handleSubmit}>
       <div className="field">
         <div className="field-label is-normal has-text-left">
-          <label className="label" htmlFor="name">From</label>
+          <label className="label" htmlFor="name">
+            From
+          </label>
         </div>
         <div className="field-body">
           <div className="field">
@@ -53,6 +61,7 @@ function ContactForm() {
                 placeholder="e.g. Mary Jane"
                 value={value.name}
                 onChange={handleChange}
+                required
               />
               <span className="icon is-small is-left">
                 <FontAwesomeIcon icon={faUser} />
@@ -80,7 +89,9 @@ function ContactForm() {
 
       <div className="field">
         <div className="field-label is-normal has-text-left">
-          <label className="label" htmlFor="subject">Subject</label>
+          <label className="label" htmlFor="subject">
+            Subject
+          </label>
         </div>
         <div className="field-body">
           <div className="field has-addons">
@@ -101,6 +112,7 @@ function ContactForm() {
                 placeholder="e.g. Partnership opportunity"
                 value={value.subject}
                 onChange={handleChange}
+                required
               />
             </p>
           </div>
@@ -109,7 +121,9 @@ function ContactForm() {
 
       <div className="field">
         <div className="field-label is-normal has-text-left">
-          <label className="label" htmlFor="message">Message</label>
+          <label className="label" htmlFor="message">
+            Message
+          </label>
         </div>
         <div className="field-body">
           <div className="field">
@@ -121,6 +135,7 @@ function ContactForm() {
                 rows="2"
                 value={value.message}
                 onChange={handleChange}
+                required
               ></textarea>
             </div>
           </div>
@@ -134,7 +149,13 @@ function ContactForm() {
         <div className="field-body">
           <div className="field">
             <div className="control">
-              <button className={`button is-primary ${isLoading ? "is-loading" : undefined}`} type="submit">
+              <button
+                className={`button is-primary ${
+                  isLoading ? "is-loading" : undefined
+                }`}
+                type="submit"
+                disabled={!validateForm()}
+              >
                 Send message
               </button>
             </div>
