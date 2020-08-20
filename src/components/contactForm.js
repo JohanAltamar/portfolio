@@ -3,7 +3,9 @@ import axios from "axios"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faUser, faEnvelope } from "@fortawesome/free-solid-svg-icons"
 
-function ContactForm() {
+/* eslint-disable */
+
+const ContactForm = () => {
   const initialValues = {
     name: "",
     email: "",

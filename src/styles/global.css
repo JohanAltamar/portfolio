@@ -18,3 +18,20 @@ html {
 .global-transition-delayed {
   transition: all 400ms ease 0ms;
 }
+
+.portfolio-project-video {
+  padding: 70vh 0 0 0;
+  position: relative;
+}
+
+/* @media screen and (min-width: 430px) {
+  .portfolio-project-video {
+    padding: 70vh 0 0 0;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .portfolio-project-video {
+    padding: 80% 0 0 0;
+  }
+} */
