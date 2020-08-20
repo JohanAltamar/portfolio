@@ -1,6 +1,8 @@
 import React from "react"
 import Layout from "../../components/projectLayout"
 import { Helmet } from "react-helmet"
+import PortfolioProjectCarousel from "../../components/portfolioProjectCarousel"
+import images from "../../images/projects/delivree/images"
 
 const Content = () => (
   <>
@@ -9,8 +11,14 @@ const Content = () => (
     </h2>
     <p className="mb-5">
       Delivree is a web application that helps small and medium size restaurants
-      to be present in the internet.
+      to be present in the internet. A{" "}
+      <a href="#demo" className="has-text-primary">
+        {" "}
+        demo
+      </a>{" "}
+      could be found at the bottom of this page.
     </p>
+    
     <h2 className="subtitle is-6 mb-2 has-text-primary has-text-weight-semibold">
       Who is Delivree useful for?
     </h2>
@@ -18,6 +26,7 @@ const Content = () => (
       Delivree was tought to be useful for restaurants' customers, employees and
       admin staff, making easy the process to place and track the orders.
     </p>
+
     <h2 className="subtitle is-6 mb-2 has-text-primary has-text-weight-semibold">
       In which devices can I use Delivree?
     </h2>
@@ -27,6 +36,31 @@ const Content = () => (
       money for native app development and using Progressive Web Apps
       Technologies.
     </p>
+
+    <h2 className="subtitle is-6 mb-3 has-text-primary has-text-weight-semibold">
+      Screenshots
+    </h2>
+    <PortfolioProjectCarousel images={images} orientation="portrait" />
+
+    <h2 className="subtitle is-6 mb-3 has-text-primary has-text-weight-semibold">
+      Video
+    </h2>
+    <div className="mb-5 portfolio-project-video">
+      <iframe
+        title="delivree app video"
+        src="https://player.vimeo.com/video/449158442?byline=0&portrait=0"
+        style={{
+          position: "absolute",
+          top: 0,
+          left: 0,
+          width: "100%",
+          height: "100%",
+        }}
+        frameBorder="0"
+        allow="autoplay; fullscreen"
+        allowFullScreen
+      ></iframe>
+    </div>
   </>
 )
 
@@ -44,6 +78,7 @@ const Head = () => (
       Technologies.
       "
     />
+    <script src="https://player.vimeo.com/api/player.js"></script>
   </Helmet>
 )
 
