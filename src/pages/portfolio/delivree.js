@@ -2,7 +2,10 @@ import React from "react"
 import Layout from "../../components/projectLayout"
 import { Helmet } from "react-helmet"
 import PortfolioProjectCarousel from "../../components/portfolioProjectCarousel"
-import images from "../../images/projects/delivree/images"
+import {
+  portraitImages,
+  landscapeImages,
+} from "../../images/projects/delivree/images"
 
 const Content = () => (
   <>
@@ -18,7 +21,7 @@ const Content = () => (
       </a>{" "}
       could be found at the bottom of this page.
     </p>
-    
+
     <h2 className="subtitle is-6 mb-2 has-text-primary has-text-weight-semibold">
       Who is Delivree useful for?
     </h2>
@@ -40,7 +43,17 @@ const Content = () => (
     <h2 className="subtitle is-6 mb-3 has-text-primary has-text-weight-semibold">
       Screenshots
     </h2>
-    <PortfolioProjectCarousel images={images} orientation="portrait" />
+    <PortfolioProjectCarousel
+      title="Mobile Version"
+      images={portraitImages}
+      orientation="portrait"
+    />
+
+    <PortfolioProjectCarousel
+      title="Desktop Version"
+      images={landscapeImages}
+      orientation="landscape"
+    />
 
     <h2 className="subtitle is-6 mb-3 has-text-primary has-text-weight-semibold">
       Video
