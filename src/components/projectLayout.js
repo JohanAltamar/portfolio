@@ -13,19 +13,30 @@ export default function ProjectLayout({ helmet, title, content, link }) {
             </h1>
           </a>
           <div className="has-text-primary">{content}</div>
-          <div>
+          <div style={styles.buttonContainer}>
             <a
               id="demo"
               className="has-text-primary has-text-weight-bold"
               target="_blank"
               rel="noreferrer"
               href={link}
+              style={styles.button}
             >
-              Demo
+              <button className='button is-primary is-medium is-rounded'>Demo</button>
             </a>
           </div>
         </div>
       </div>
     </Layout>
   )
+}
+
+const styles = {
+  buttonContainer: {
+    width: '100%', 
+    textAlign: 'center'
+  },
+  button: {
+    margin: 'auto',
+  }
 }
