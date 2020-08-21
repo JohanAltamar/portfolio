@@ -2,7 +2,7 @@ import React, { useState } from "react"
 import PropTypes from "prop-types"
 import "./styles/portfolioProjectCarousel.css"
 
-const PortfolioProjectCarousel = ({ images, orientation }) => {
+const PortfolioProjectCarousel = ({ images, orientation, title }) => {
   const [slideIndex, setSlideIndex] = useState(1)
 
   const plusSlides = step => {
@@ -22,7 +22,8 @@ const PortfolioProjectCarousel = ({ images, orientation }) => {
 
   return (
     <>
-      <div className={`slideshow-container-${orientation}`}>
+      {title && <h4 style={{ padding: "0px 0px 8px 16px" }}>{title}</h4>}
+      <div className={`slideshow-container slideshow-container-${orientation}`}>
         {images.map((image, index) => (
           <div
             key={index}
@@ -61,7 +62,8 @@ const PortfolioProjectCarousel = ({ images, orientation }) => {
 
 PortfolioProjectCarousel.propTypes = {
   images: PropTypes.array.isRequired,
-  orientation: PropTypes.string.isRequired,
+  orientation: PropTypes.oneOf(["portrait", "landscape"]).isRequired,
+  title: PropTypes.string,
 }
 
 export default PortfolioProjectCarousel
