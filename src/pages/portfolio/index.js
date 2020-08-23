@@ -47,6 +47,9 @@ export default function Contact() {
     <Layout>
       <Helmet>
         <title>Portfolio & Skills</title>
+        <meta 
+          name="description" 
+          content="Page to show skills and latest projects made by Johan Altamar. React, node js, html, css, javascript and firebase are some of the web technologies that Johan Altamar knows. Projects for restaurants apps, point of sale apps can be found."/>
       </Helmet>
       <div id="portfolio-container" className="container">
         <Section

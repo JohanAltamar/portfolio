@@ -5,27 +5,26 @@ import { Helmet } from "react-helmet"
 const Content = () => (
   <>
     <h2 className="subtitle is-6 mb-2 has-text-primary has-text-weight-semibold">
-      What is Delivree?
+      What is China Bistro Restaurant?
     </h2>
     <p className="mb-5">
-      Delivree is a web application that helps small and medium size restaurants
-      to be present in the internet.
+      China Bistro Restaurant is a website built during a web development
+      course.
     </p>
     <h2 className="subtitle is-6 mb-2 has-text-primary has-text-weight-semibold">
-      Who is Delivree useful for?
+      Who is this site useful for?
     </h2>
     <p className="mb-5">
-      Delivree was tought to be useful for restaurants' customers, employees and
-      admin staff, making easy the process to place and track the orders.
+      The site is useful for owners and customers. The first ones can show the
+      products and services, while the customers can choose over the products
+      they offer.
     </p>
     <h2 className="subtitle is-6 mb-2 has-text-primary has-text-weight-semibold">
-      In which devices can I use Delivree?
+      In which devices can I use this site?
     </h2>
     <p className="mb-5">
-      This app can be used through web browsers, but also can be installed on
-      your device: personal computer, tablet or cellphone, without paying more
-      money for native app development and using Progressive Web Apps
-      Technologies.
+      As a responsive website, this is well shown through the different devices:
+      desktop. tablet and mobile.
     </p>
   </>
 )
@@ -35,24 +34,17 @@ const Head = () => (
     <title>China Bistro Web Page</title>
     <meta
       name="description"
-      content="Delivree is a web application that helps small and medium size restaurants to be present in the internet.
-      Delivree was tought to be useful for restaurants' customers, employees and
-      admin staff, making easy the process to place and track the orders.
-      This app can be used through web browsers, but also can be installed on
-      your device: personal computer, tablet or cellphone, without paying more
-      money for native app development and using Progressive Web Apps
-      Technologies.
-      "
+      content="China Bistro Restaurant is a website built by Johan Altamar during a web development course."
     />
   </Helmet>
 )
 
-export default function Delivree() {
+export default function ChinaBistroRestaurant() {
   return (
     <Layout
-      title="Delivree"
+      title="China Bistro Restaurant"
       content={<Content />}
-      link="https://delivree.johanaltamar.com"
+      link="https://bistro.johanaltamar.com"
       helmet={<Head />}
     />
   )
