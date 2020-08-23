@@ -82,7 +82,7 @@ const Head = () => (
     <title>Delivree Web App</title>
     <meta
       name="description"
-      content="Delivree is a web application that helps small and medium size restaurants to be present in the internet.
+      content="Delivree App is a web application that helps small and medium size restaurants to be present in the internet.
       Delivree was tought to be useful for restaurants' customers, employees and
       admin staff, making easy the process to place and track the orders.
       This app can be used through web browsers, but also can be installed on
