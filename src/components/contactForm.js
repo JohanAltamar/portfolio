@@ -30,7 +30,7 @@ const ContactForm = () => {
     event.preventDefault()
     setIsLoading(true)
     const data = {
-      to:'johanaltro@gmail.com',
+      to:'johan.altamar.dev@gmail.com',
       from: `${value.name} <${value.email}>`,
       subject: `${value.area} | ${value.subject}`,
       message: `
