@@ -39,7 +39,7 @@ const ContactForm = () => {
       Message: ${value.message}`,
     }
 
-    const res = await axios.post("https://mail.johanaltamar.com", data)
+    const res = await axios.post("https://mailer-johan-altamar.herokuapp.com/", data)
     if (res.data === "Contact info sent!") {
       setValue(initialValues)
       setIsLoading(false)
